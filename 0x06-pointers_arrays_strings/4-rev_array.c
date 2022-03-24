@@ -1,24 +1,20 @@
 #include "main.h"
 
 /**
- * _strcmp - compares two strings
- * @s1: string 1
- * @s2: string 2
- * Return: 1 if true, 0 if false
+ * reverse_array - reverses the content of an array of integers.
+ * @a: an array of integers
+ * @n: the number of elements to swap
+ *
+ * Return: nothing.
  */
-int _strcmp(char *s1, char *s2)
+void reverse_array(int *a, int n)
 {
-	int equal = 0;
+	int i, j, t;
 
-	while (*s1)
+	for (i = 0, j = (n - 1); i < j; i++, j--)
 	{
-		if (*s1 != *s2)
-		{
-			equal = ((int)*s1 - 48) - ((int)*s2 - 48);
-			break;
-		}
-		s1++;
-		s2++;
+		t = a[i];
+		a[i] = a[j];
+		a[j] = t;
 	}
-	return (equal);
 }
