@@ -23,9 +23,10 @@ return (check_prime(n, 2));
 int check_prime(int n, int resp)
 {
 
-	if (resp >= n && n > 1))
+	if (resp >= n && n > 1)
 		return (1);
-else if (n % resp == 0 || n <= 1)	
-		return (0);
+else if (n % resp == 0 || n <= 1)
+	return (0);
+	else
+		return (check_prime(n, resp + 1));
 }
-	
