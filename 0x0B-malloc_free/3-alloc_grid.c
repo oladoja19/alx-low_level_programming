@@ -5,7 +5,7 @@
  * @width: int
  * @height: int
  * Return: 2d array
- * */
+ */
 
 int **alloc_grid(int width, int height)
 {
